@@ -12,17 +12,44 @@ import java.io.InputStreamReader;
 import org.apache.commons.io.IOUtils;  
 import java.net.*;
 import org.apache.commons.codec.binary.Base64; 
+import java.net.PasswordAuthentication;
+
+class ProxyAuthenticator extends Authenticator {
+	private String user, password;
+
+	public ProxyAuthenticator(String user, String password) {
+		this.user     = user;
+		this.password = password;
+	}
+
+	protected PasswordAuthentication getPasswordAuthentication() {
+		return new PasswordAuthentication(user, password.toCharArray());
+	}
+}
+ 
 
 public class HttpUrlConnectionDemo {
 
-	public static String requestUrl(String requestUrl,String headerkey,String headerValue)
+
+	public static String requestUrl(String requestUrl)
 	{
-		InetSocketAddress addr = new InetSocketAddress("http-proxy-sg1.dobel.cn",9180);//代理服务器地址,端口
+		// 代理服务器
+		String proxyServer = "http-proxy-sg1.dobel.cn";
+		int proxyPort      = 9180;
+		// 代理隧道验证信息
+		String proxyUser  = "u4ULLFwgj2";
+		String proxyPass  = "dLLKiwtlslf";
+
+		Authenticator.setDefault(new ProxyAuthenticator(proxyUser, proxyPass));
+
+		InetSocketAddress addr = new InetSocketAddress(proxyServer,proxyPort);//代理服务器地址,端口
 		Proxy proxy = new Proxy(Proxy.Type.HTTP, addr);
+
+
 		try {
 			URL url = new URL(requestUrl);
-			URLConnection conn = url.openConnection(proxy);
-			conn.setRequestProperty(headerkey, headerValue);
+			// 设置通过代理访问目标页面
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection(proxy);
 			InputStream in = conn.getInputStream();
 			String s = IOUtils.toString(in, "utf-8");
 			return s;
@@ -34,20 +61,15 @@ public class HttpUrlConnectionDemo {
 
 	public static void main(String[] args) {
 		try {
-			String headerkey = "Proxy-Authorization";
-			final String text = "udgw3:udss3";//账号:密码
-			final byte[] textByte = text.getBytes();
-			String headerValue = "Basic "+Base64.encodeBase64String(textByte);
-			//System.out.println(headerValue);
 
                         //访问目标url
-                        String s = requestUrl("http://www.taobao.com/help/getip.php",headerkey,headerValue);
+                        String s = requestUrl("http://www.taobao.com/help/getip.php");
 			System.out.println("目标网站访问成功："+s);
                         //切换IP
-                        String ss = requestUrl("http://ip.dobel.cn/switch-ip",headerkey,headerValue);
+                        String ss = requestUrl("http://ip.dobel.cn/switch-ip");
 			System.out.println("IP切换成功："+ss);
                         //再次访问目标网站
-                        String sss = requestUrl("http://www.taobao.com/help/getip.php",headerkey,headerValue);
+                        String sss = requestUrl("https://www.baidu.com");
 			System.out.println("目标网站再次访问成功： "+sss);
 
 		} catch (Exception e) {
