@@ -5,7 +5,7 @@ from aiohttp import ClientSession, TCPConnector, BasicAuth
 async def fetch(url, session):
     proxy_auth = BasicAuth('ud92tos25', 'usgggs25')
     async with session.get(url=url,
-                           proxy="http://58.215.120.212:9180",
+                           proxy="http://http-proxy-sg2.dobel.cn:9180",
                            proxy_auth=proxy_auth) as resp:
         print(await resp.read())
 
