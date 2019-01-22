@@ -6,12 +6,12 @@ $Url = "https://www.taobao.com/help/getip.php";
 //切换IP的URL
 $switchUrl = "http://ip.dobel.cn/switch-ip";
 
-// 接入服务器
-$proxyServer = "http://http-proxy-sg1.dobel.cn:9180";
+// 设置代理服务器域名和端口，注意，具体的域名要依据据开通账号时分配的而定
+$proxyServer = "http://域名:9180";
 
 // 代理账号密码信息
-$proxyUser   = "IFLlIUr22";
-$proxyPass   = "u2lgKegg";
+$proxyUser   = "账号";
+$proxyPass   = "密码";
 
 $ch = curl_init();
 
