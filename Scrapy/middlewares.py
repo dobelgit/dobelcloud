@@ -107,10 +107,10 @@ class FormoonDownloaderMiddleware(object):
 class ProxyMiddleware(object):
         # overwrite process request
 	def process_request(self, request, spider):
-                # Set the location of the proxy
-		request.meta['proxy'] = "http://http-proxy-sg1.dobel.cn:9180"
+                # 设置代理服务器域名和端口，注意，具体的域名要依据据开通账号时分配的而定
+		request.meta['proxy'] = "http://域名:9180"
 
-                # Use the following lines if your proxy requires authentication
+                # 设置账号密码
 		proxy_user_pass = "httuser:userpass"
                 # setup basic authentication for the proxy
                 # For python3
