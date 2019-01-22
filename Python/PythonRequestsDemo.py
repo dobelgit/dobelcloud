@@ -6,12 +6,12 @@ import requests
 targetUrl = "https://www.taobao.com/help/getip.php"
 
 #http代理接入服务器地址端口
-proxyHost = "http-proxy-sg1.dobel.cn"
+proxyHost = "域名"
 proxyPort = "9180"
 
 #账号密码
-proxyUser = "user"
-proxyPass = "passwd"
+proxyUser = "账号"
+proxyPass = "密码"
 
 proxyMeta = "http://%(user)s:%(pass)s@%(host)s:%(port)s" % {
         "host" : proxyHost,
