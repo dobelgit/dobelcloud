@@ -20,12 +20,12 @@ public class JavaHttpClientDemo {
     //目标网址 
     final static String targetUrl = "https://www.taobao.com/help/getip.php"; 
     // 代理服务器
-    final static String proxyHost = "http-proxy-sg1.dobel.cn";
+    final static String proxyHost = "域名";
     final static Integer proxyPort = 9180;
 
     // 代理隧道验证信息
-    final static String proxyUser = "u4dddd";
-    final static String proxyPass = "u4ojwl";
+    final static String proxyUser = "账号";
+    final static String proxyPass = "密码";
 
 
     public static void main(String[] args) throws Exception {
