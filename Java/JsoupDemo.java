@@ -12,11 +12,11 @@ public class JsoupDemo {
     // 目标页面
     final static String targetUrl = "https://www.taobao.com/help/getip.php";
     // 代理服务器
-    final static String ProxyHost = "http-proxy-sg1.dobel.cn";
+    final static String ProxyHost = "域名";
     final static Integer ProxyPort = 9180;
     // 代理账号密码
-    final static String ProxyUser = "user";
-    final static String ProxyPass = "passwd";
+    final static String ProxyUser = "账号";
+    final static String ProxyPass = "密码";
 
 
     private static void getUrl(String url) {
