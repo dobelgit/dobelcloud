@@ -3,10 +3,10 @@ import asyncio
 from aiohttp import ClientSession, TCPConnector, BasicAuth
 
 async def fetch(url, session):
-    proxy_auth = BasicAuth('tstfmsfsfax', '0sfsf0fsf0')
+    proxy_auth = BasicAuth('账号', '密码')
     headers = {'connection': 'closed'}
     async with session.get(url=url,
-                           proxy="http://http-proxy-sg1.dobel.cn:9180",
+                           proxy="http://域名:9180",
                            proxy_auth=proxy_auth,
                            headers=headers) as resp:
         print(await resp.read())
