@@ -12,9 +12,9 @@ import (
 func main() {
 
     //creating the proxyURL
-    proxyStr := "http://http-proxy-sg1.dobel.cn:9180"
+    proxyStr := "http://域名:9180"
     proxyURL, err := url.Parse(proxyStr)
-    proxyURL.User = url.UserPassword("dsfsfu5", "ufsff5")
+    proxyURL.User = url.UserPassword("账号", "密码")
     if err != nil {
         log.Println(err)
     }
