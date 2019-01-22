@@ -34,11 +34,11 @@ public class HttpUrlConnectionDemo {
 	public static String requestUrl(String requestUrl)
 	{
 		// 代理服务器
-		String proxyServer = "http-proxy-sg1.dobel.cn";
+		String proxyServer = "域名";
 		int proxyPort      = 9180;
 		// 代理隧道验证信息
-		String proxyUser  = "u4ULLFwgj2";
-		String proxyPass  = "dLLKiwtlslf";
+		String proxyUser  = "账号";
+		String proxyPass  = "密码";
 
 		Authenticator.setDefault(new ProxyAuthenticator(proxyUser, proxyPass));
 
