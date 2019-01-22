@@ -12,12 +12,12 @@ Url = "https://www.taobao.com/help/getip.php"
 switchUrl = "http://ip.dobel.cn/switch-ip"
 
 # 接入服务器地址信息
-proxyServer = "http-proxy-sg1.dobel.cn"
+proxyServer = "域名"
 proxyPort = "9180"
 
 # 代理账号密码信息
-proxyUser = "KFuiKF1"
-proxyPass = "LFKu1oe"
+proxyUser = "账号"
+proxyPass = "密码"
 
 proxyInfo = "http://%(account)s:%(password)s@%(host)s:%(port)s" % {
 	"host" : proxyServer,
