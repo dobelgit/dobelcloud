@@ -35,7 +35,7 @@ public class HttpUrlConnectionDemo {
 	{
 		// 代理服务器
 		String proxyServer = "域名";
-		int proxyPort      = 9180;
+		int proxyPort      = 端口;
 		// 代理隧道验证信息
 		String proxyUser  = "账号";
 		String proxyPass  = "密码";
