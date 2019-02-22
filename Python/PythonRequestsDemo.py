@@ -7,7 +7,7 @@ targetUrl = "https://www.taobao.com/help/getip.php"
 
 #http代理接入服务器地址端口
 proxyHost = "域名"
-proxyPort = "9180"
+proxyPort = "端口"
 
 #账号密码
 proxyUser = "账号"
