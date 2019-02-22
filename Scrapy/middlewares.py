@@ -108,7 +108,7 @@ class ProxyMiddleware(object):
         # overwrite process request
 	def process_request(self, request, spider):
                 # 设置代理服务器域名和端口，注意，具体的域名要依据据开通账号时分配的而定
-		request.meta['proxy'] = "http://域名:9180"
+		request.meta['proxy'] = "http://域名:端口"
 
                 # 设置账号密码
 		proxy_user_pass = "httuser:userpass"
