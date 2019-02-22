@@ -21,7 +21,7 @@ public class JavaHttpClientDemo {
     final static String targetUrl = "https://www.taobao.com/help/getip.php"; 
     // 代理服务器
     final static String proxyHost = "域名";
-    final static Integer proxyPort = 9180;
+    final static Integer proxyPort = "端口";
 
     // 代理隧道验证信息
     final static String proxyUser = "账号";
