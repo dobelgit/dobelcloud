@@ -13,7 +13,7 @@ switchUrl = "http://ip.dobel.cn/switch-ip"
 
 # 接入服务器地址信息
 proxyServer = "域名"
-proxyPort = "9180"
+proxyPort = "端口"
 
 # 代理账号密码信息
 proxyUser = "账号"
