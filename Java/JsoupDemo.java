@@ -13,7 +13,7 @@ public class JsoupDemo {
     final static String targetUrl = "https://www.taobao.com/help/getip.php";
     // 代理服务器
     final static String ProxyHost = "域名";
-    final static Integer ProxyPort = 9180;
+    final static Integer ProxyPort = 端口;
     // 代理账号密码
     final static String ProxyUser = "账号";
     final static String ProxyPass = "密码";
