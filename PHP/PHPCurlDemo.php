@@ -7,7 +7,7 @@ $Url = "https://www.taobao.com/help/getip.php";
 $switchUrl = "http://ip.dobel.cn/switch-ip";
 
 // 设置代理服务器域名和端口，注意，具体的域名要依据据开通账号时分配的而定
-$proxyServer = "http://域名:9180";
+$proxyServer = "http://域名:端口";
 
 // 代理账号密码信息
 $proxyUser   = "账号";
