@@ -6,7 +6,7 @@ async def fetch(url, session):
     proxy_auth = BasicAuth('账号', '密码')
     headers = {'connection': 'closed'}
     async with session.get(url=url,
-                           proxy="http://域名:9180",
+                           proxy="http://域名:端口",
                            proxy_auth=proxy_auth,
                            headers=headers) as resp:
         print(await resp.read())
