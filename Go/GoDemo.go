@@ -23,7 +23,7 @@ func main() {
 
 
     //creating the URL to be loaded through the proxy
-    urlStr := "https://www.taobao.com/help/getip.php"
+    urlStr := "https://myip.ipip.net"
     url, err := url.Parse(urlStr)
     if err != nil {
         log.Println(err)
