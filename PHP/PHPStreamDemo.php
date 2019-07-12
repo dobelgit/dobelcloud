@@ -12,7 +12,7 @@ $aContext = array(
     ),    
 );    
 $cxContext = stream_context_create($aContext);    
-$sFile = file_get_contents('https://www.taobao.com/help/getip.php', False, $cxContext);    
+$sFile = file_get_contents('http://myip.ipip.net', False, $cxContext);    
 
 echo "headers:".$auth."\n";
 
