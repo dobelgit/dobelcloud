@@ -11,10 +11,10 @@ async def fetch(url, session):
                            headers=headers) as resp:
         print(await resp.read())
 
-connector = TCPConnector(limit=60)
+connector = TCPConnector(limit=10)
 session = ClientSession(connector=connector)
 nums = 300
-url = 'https://www.taobao.com/help/getip.php'
+url = 'http://myip.ipip.net'
 tasks = [fetch(url, session) for x in range(nums)]
 begin = time.time()
 try:
