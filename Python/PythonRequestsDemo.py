@@ -3,7 +3,7 @@
 import requests
 
 #目标网址
-targetUrl = "https://www.taobao.com/help/getip.php"
+targetUrl = "http://myip.ipip.net"
 
 #http代理接入服务器地址端口
 proxyHost = "域名"
