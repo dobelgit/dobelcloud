@@ -1,7 +1,7 @@
 <?php
 
 // 要访问的页面
-$Url = "https://www.taobao.com/help/getip.php";
+$Url = "http://myip.ipip.net";
 
 //切换IP的URL
 $switchUrl = "http://ip.dobel.cn/switch-ip";
