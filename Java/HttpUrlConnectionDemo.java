@@ -63,7 +63,7 @@ public class HttpUrlConnectionDemo {
 		try {
 
                         //访问目标url
-                        String s = requestUrl("http://www.taobao.com/help/getip.php");
+                        String s = requestUrl("http://myip.ipip.net");
 			System.out.println("目标网站访问成功："+s);
                         //切换IP
                         String ss = requestUrl("http://ip.dobel.cn/switch-ip");
