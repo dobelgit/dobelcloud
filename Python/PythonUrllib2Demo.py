@@ -8,9 +8,6 @@ import urllib2
 # 要访问的页面
 Url = "http://myip.ipip.net"
 
-#切换IP的URL
-switchUrl = "http://ip.dobel.cn/switch-ip"
-
 # 接入服务器地址信息
 proxyServer = "域名"
 proxyPort = "端口"
@@ -39,10 +36,3 @@ urllib2.install_opener(opener)
 resp = urllib2.urlopen(Url).read()
 print resp   
 
-#切换IP
-resp = urllib2.urlopen(switchUrl).read()
-print resp   
-
-#再次访问目标页面，验证IP是否切换成功
-resp = urllib2.urlopen(Url).read()
-print resp   
