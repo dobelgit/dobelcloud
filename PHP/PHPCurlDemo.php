@@ -3,9 +3,6 @@
 // 要访问的页面
 $Url = "http://myip.ipip.net";
 
-//切换IP的URL
-$switchUrl = "http://ip.dobel.cn/switch-ip";
-
 // 设置代理服务器域名和端口，注意，具体的域名要依据据开通账号时分配的而定
 $proxyServer = "http://域名:端口";
 
