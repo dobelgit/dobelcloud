@@ -65,13 +65,6 @@ public class HttpUrlConnectionDemo {
                         //访问目标url
                         String s = requestUrl("http://myip.ipip.net");
 			System.out.println("目标网站访问成功："+s);
-                        //切换IP
-                        String ss = requestUrl("http://ip.dobel.cn/switch-ip");
-			System.out.println("IP切换成功："+ss);
-                        //再次访问目标网站
-                        String sss = requestUrl("https://www.baidu.com");
-			System.out.println("目标网站再次访问成功： "+sss);
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
