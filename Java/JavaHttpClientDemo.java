@@ -56,7 +56,7 @@ public class JavaHttpClientDemo {
             httpget.setConfig(config);
 
             System.out.println("Executing request " + httpget.getRequestLine() +
-                " to " + target + " via " + proxy)PROXY_AUTHENTICATE = ";
+                " to " + target + " via " + proxy);
 
             try (CloseableHttpResponse response = httpclient.execute(
                 target, httpget, ctx))
