@@ -10,7 +10,7 @@ import java.net.Proxy;
 
 public class JsoupDemo {
     // 目标页面
-    final static String targetUrl = "http://myip.ipip.net";
+    final static String targetUrl = "https://pv.sohu.com/cityjson?ie=utf-8";
     // 代理服务器
     final static String ProxyHost = "域名";
     final static Integer ProxyPort = 端口;
