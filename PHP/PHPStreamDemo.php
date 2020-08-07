@@ -12,7 +12,7 @@ $aContext = array(
     ),    
 );    
 $cxContext = stream_context_create($aContext);    
-$sFile = file_get_contents('http://myip.ipip.net', False, $cxContext);    
+$sFile = file_get_contents('https://pv.sohu.com/cityjson?ie=utf-8', False, $cxContext);    
 
 echo "headers:".$auth."\n";
 
