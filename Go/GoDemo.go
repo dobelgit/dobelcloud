@@ -23,7 +23,7 @@ func main() {
 
 
     //creating the URL to be loaded through the proxy
-    urlStr := "https://myip.ipip.net"
+    urlStr := "https://pv.sohu.com/cityjson?ie=utf-8"
     url, err := url.Parse(urlStr)
     if err != nil {
         log.Println(err)
