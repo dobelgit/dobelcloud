@@ -6,7 +6,7 @@ import urllib2
 
 
 # 要访问的页面
-Url = "http://myip.ipip.net"
+Url = "https://pv.sohu.com/cityjson?ie=utf-8"
 
 # 接入服务器地址信息
 proxyServer = "域名"
