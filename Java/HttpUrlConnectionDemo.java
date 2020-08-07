@@ -63,7 +63,7 @@ public class HttpUrlConnectionDemo {
 		try {
 
                         //访问目标url
-                        String s = requestUrl("http://myip.ipip.net");
+                        String s = requestUrl("https://pv.sohu.com/cityjson?ie=utf-8");
 			System.out.println("目标网站访问成功："+s);
 		} catch (Exception e) {
 			e.printStackTrace();
