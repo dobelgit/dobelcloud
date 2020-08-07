@@ -34,7 +34,7 @@ public class JavaHttpClientDemo {
                 .setDefaultCredentialsProvider(credsProvider)
                 .build())
         {
-            HttpHost target = new HttpHost("myip.ipip.net", 443, "https");
+            HttpHost target = new HttpHost("pv.sohu.com", 443, "https");
             HttpHost proxy = new HttpHost("代理服务器域名", 9180);
 
             AuthCache authCache = new BasicAuthCache();
@@ -52,7 +52,7 @@ public class JavaHttpClientDemo {
                 .setProxy(proxy)
                 .build();
             
-            HttpGet httpget = new HttpGet("/");
+            HttpGet httpget = new HttpGet("/cityjson?ie=utf-8");
             httpget.setConfig(config);
 
             System.out.println("Executing request " + httpget.getRequestLine() +
