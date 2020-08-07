@@ -3,7 +3,7 @@
 import requests
 
 #目标网址
-targetUrl = "http://myip.ipip.net"
+targetUrl = "https://pv.sohu.com/cityjson?ie=utf-8"
 
 #http代理接入服务器地址端口
 proxyHost = "域名"
