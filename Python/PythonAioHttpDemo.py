@@ -14,7 +14,7 @@ async def fetch(url, session):
 connector = TCPConnector(limit=10)
 session = ClientSession(connector=connector)
 nums = 300
-url = 'http://myip.ipip.net'
+url = 'https://pv.sohu.com/cityjson?ie=utf-8'
 tasks = [fetch(url, session) for x in range(nums)]
 begin = time.time()
 try:
