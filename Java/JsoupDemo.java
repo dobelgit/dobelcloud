@@ -6,6 +6,7 @@ import java.net.InetSocketAddress;
 import java.net.PasswordAuthentication;
 import java.net.Proxy;
 
+//注意：本demo要求jdk版本必须是 1.8.0_77
 
 
 public class JsoupDemo {
