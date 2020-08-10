@@ -1,49 +1,37 @@
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
+ 
 import java.io.IOException;
-import java.net.Authenticator;
-import java.net.InetSocketAddress;
-import java.net.PasswordAuthentication;
-import java.net.Proxy;
+ 
+import org.jsoup.Jsoup;
+ 
+public class JsoupSetProxyExample {
+ 
+    public static void main(String[] args) {
+        
+        try{
+            
+            //http代理服务器地址
+            System.setProperty("http.proxyHost", "域名");
+            
+            //http代理服务器端口
+            System.setProperty("http.proxyPort", "端口");
+            //代理账号密码
+	        System.setProperty("https.proxyUser", "账号");
+	        System.setProperty("https.proxyPassword", "密码");
 
-//注意：本demo要求jdk版本必须是 1.8.0_77
-
-
-public class JsoupDemo {
-    // 目标页面
-    final static String targetUrl = "https://pv.sohu.com/cityjson?ie=utf-8";
-    // 代理服务器
-    final static String ProxyHost = "域名";
-    final static Integer ProxyPort = 端口;
-    // 代理账号密码
-    final static String ProxyUser = "账号";
-    final static String ProxyPass = "密码";
-
-
-    private static void getUrl(String url) {
-        Authenticator.setDefault(new Authenticator() {
-            public PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(ProxyUser, ProxyPass.toCharArray());
-            }
-        });
-
-        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress(ProxyHost, ProxyPort));
-
-        try {
-            Document doc = Jsoup.connect(url).timeout(4000).proxy(proxy).get();
-
-            if (doc != null) {
-                System.out.println(doc.body().html());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+            String strText = 
+                    Jsoup
+                    //.connect("https://myip.ipip.net")
+                    .connect("https://pv.sohu.com/cityjson?ie=utf-8")
+                    .userAgent("Mozilla/5.0")
+                    .timeout(10 * 1000)
+                    .get()
+                    .text();
+            
+            System.out.println(strText);
+            
+        }catch(IOException ioe){
+            System.out.println("Exception: " + ioe);
         }
-    }
-    
-    
-    
-    public static void main(String[] args) throws Exception {
-
-        getUrl(targetUrl);
+ 
     }
 }
